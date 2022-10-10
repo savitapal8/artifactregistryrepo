@@ -36,6 +36,7 @@ resource "google_kms_key_ring" "example-keyring" {
  resource "google_kms_crypto_key" "key" {
    name     = "wf-us-prod-kms-kyghi-app01"
    key_ring = google_kms_key_ring.example-keyring.id
+   labels   = var.labels
 }
 
 # GAR Repository Resource with CMEK
@@ -46,10 +47,10 @@ resource "google_artifact_registry_repository" "my-repo" {
   description   = "example docker repository with cmek"
   format        = "DOCKER"
   labels        = var.labels
-  #kms_key_name  = google_kms_crypto_key.key.id
-  #  depends_on = [
-  #    google_kms_crypto_key_iam_member.crypto_key
-  #]
+  kms_key_name  = google_kms_crypto_key.key.id
+    depends_on = [
+      google_kms_crypto_key_iam_member.crypto_key
+  ]
 }
 
 # Grant cryptoKeyEncrypterDecrypter role to Artifact Registry Service Agent
