@@ -20,8 +20,3 @@ variable "access_token"{
 variable "labels"{
     type = map
 }
-
-variable "access_token"{
-    type = string
-    sensitive   = true
-}
