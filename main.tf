@@ -40,8 +40,8 @@ resource "google_project_service_identity" "sa_identity" {
 
 # GAR Repository Resource with CMEK
 resource "google_artifact_registry_repository" "my-repo" {
-  location      = "us-central1"
-  repository_id = "my-repository"
+  location      = var.region
+  repository_id = "wf-us-prod-gar-fghi-app01"
   description   = "example docker repository with cmek"
   format        = "DOCKER"
   # kms_key_name  = google_kms_crypto_key.key.id
