@@ -34,7 +34,7 @@ resource "google_kms_key_ring" "example-keyring" {
 
 # Create a KMS key within the provided KMS key-ring
  resource "google_kms_crypto_key" "key" {
-   name     = "wf-us-prod-kms-key-app01"
+   name     = "wf-us-prod-kms-kyghi-app01"
    key_ring = google_kms_key_ring.example-keyring.id
 }
 
