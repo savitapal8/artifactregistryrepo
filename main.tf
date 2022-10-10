@@ -41,7 +41,8 @@ resource "google_kms_key_ring" "example-keyring" {
 # GAR Repository Resource with CMEK
 resource "google_artifact_registry_repository" "my-repo" {
   location      = var.region
-  repository_id = "wf-us-prod-gar-fghi-app01"
+  #repository_id = "wf-us-prod-gar-fghi-app01"
+  repository_id = "wf-us-prod-gra-fghi-app01"
   description   = "example docker repository with cmek"
   format        = "DOCKER"
   labels        = var.labels
