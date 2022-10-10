@@ -11,3 +11,8 @@ variable "project_id" {
   type    = string
   default = "modular-scout-345114"
 }
+
+variable "access_token"{
+    type = string
+    sensitive   = true
+}
