@@ -1,5 +1,5 @@
-provider_project = "modular-scout-345114"
-provider_region = "us-central1"
+project_id = "modular-scout-345114"
+region = "us-central1"
 
 labels = { 
       gcp_region = "US",
