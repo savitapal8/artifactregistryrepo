@@ -7,7 +7,7 @@ labels = {
       application_division = "pci",
       application_name = "demo",
       application_role = "app",
-      environment = "dev",
-      au = "Hybrid code = 0223092",
+      environment = "prod",
+      au = "0223092",
       created = "20220802", 
 }
