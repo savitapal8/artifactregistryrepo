@@ -39,7 +39,7 @@ resource "google_kms_key_ring" "example-keyring" {
    labels   = var.labels
    import_only = true
    skip_initial_version_creation = true
-   rotation_period = "100000s"
+   rotation_period = "7776000s"
 }
 
 # GAR Repository Resource with CMEK
