@@ -37,6 +37,9 @@ resource "google_kms_key_ring" "example-keyring" {
    name     = "wf-us-prod-kms-kyghi-app01"
    key_ring = google_kms_key_ring.example-keyring.id
    labels   = var.labels
+   import_only = true
+   skip_initial_version_creation = true
+   rotation_period = "100000s"
 }
 
 # GAR Repository Resource with CMEK
